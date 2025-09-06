@@ -6,3 +6,13 @@
 # produto = {"nome": "Arroz", "preco": 25.90, "estoque": 100}
 # print(f"O produto {produto["nome"]} custa R${produto["preco"]}")
 
+print("Registro de Produtos")
+
+produto = {
+    "nome": "Arroz", 
+    "preco": 25.90, 
+    "estoque": 100
+    }
+
+print(f"O produto {produto["nome"]} custa R${produto["preco"]}")
+

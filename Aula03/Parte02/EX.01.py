@@ -12,3 +12,10 @@
 #2. Descobrir o dia com mais vendas e o dia com menos vendas. 
 #3. Calcular a média de vendas por dia. 
 #4. Listar os dias que tiveram vendas acima da média. 
+
+print("***Análise de Vendas Mensais***")
+
+vendas={
+
+    1
+}

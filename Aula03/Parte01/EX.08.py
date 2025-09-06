@@ -4,3 +4,14 @@
 # Exemplo:agenda = {"Maria": "99999-1234", "João": "98888-5678"}
 # print("Telefone da Maria:", agenda["Maria"])
 
+print("Agenda Telefônica")
+
+agenda = {
+    "Maria": 99999-1234, 
+    "João": 98888-5678,
+    
+    }
+print(agenda)
+
+agenda.update({"Ana", 99988-7766})
+print(agenda)
