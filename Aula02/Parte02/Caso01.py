@@ -13,7 +13,6 @@ quarta = []
 quinta = []
 sexta = []
 semana = [segunda, terca, quarta, quinta, sexta]
-t_alunos = set(segunda + terca + quarta + quinta + sexta)
 
 def seg():
     print("===Presenças de Segunda Feira===\n")
@@ -21,7 +20,7 @@ def seg():
         aluno = input(f"Digite o {i+1}° nome do aluno presente: ")
         segunda.append(aluno)
         segunda.sort()
-        print("Até amanhã, Professor(a)!\n")
+    print("\nAté amanhã, Professor(a)!\n")
 
 def ter():
     print("===Presenças de Terça Feira===\n")
@@ -29,7 +28,7 @@ def ter():
         aluno = input(f"Digite o {i+1}° nome do aluno presente: ")
         terca.append(aluno)
         terca.sort()
-        print("Até amanhã, Professor(a)!\n")
+    print("\nAté amanhã, Professor(a)!\n")
 
 def qua():
     print("===Presenças de Quarta Feira===\n")
@@ -37,14 +36,14 @@ def qua():
         aluno = input(f"Digite o {i+1}° nome do aluno presente: ")
         quarta.append(aluno)
         quarta.sort()
-        print("Até amanhã, Professor(a)!\n")
+    print("\nAté amanhã, Professor(a)!\n")
 
 def qui():
     print("===Presenças de Quinta Feira===\n")
     for i in range(5):
         aluno = input(f"Digite o {i+1}° nome do aluno presente: ")
         quinta.append(aluno)
-        print("Até amanhã, Professor(a)!\n")
+    print("\nAté amanhã, Professor(a)!\n")
 
 def sex():
     print("===Presenças de Sexta Feira===\n")
@@ -52,7 +51,7 @@ def sex():
         aluno = input(f"Digite o {i+1}° nome do aluno presente: ")
         sexta.append(aluno)
         sexta.sort()
-        print("Até Segunda, Professor(a)!\n")
+    print("\nAté Segunda, Professor(a)!\n")
 
 def relatorio():
     print("===Relatório da Semana===\n")
@@ -60,11 +59,12 @@ def relatorio():
     for dia in semana:
         p_t_d = p_t_d.intersection(dia)
 
+    t_alunos = set(segunda + terca + quarta + quinta + sexta)
     f_a_d = set(segunda)
     for dia in semana:
-        f_a_d = t_alunos - p_t_d.intersection(dia)
-    
-    t_p = 0
+        f_a_d = t_alunos - p_t_d
+   
+    t_p = {}
     for aluno in t_alunos:
         t_p[aluno] = 0
         for dia in semana:

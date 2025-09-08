@@ -1,6 +1,6 @@
 # Estatísticas de notas
 
-entrada = input("Digite as notas: ")
+entrada = input("\nDigite as notas: ")
 
 notas =[float(n) for n in entrada.split()]
 

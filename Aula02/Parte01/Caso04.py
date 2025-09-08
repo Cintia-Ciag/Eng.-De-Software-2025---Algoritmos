@@ -16,33 +16,31 @@ def registrar():
     
     print("\nControle de Vendas da Loja de Eletrônicos\n")
     iten=input("Qual o nome do produto? ")
-    valor=(input("Qual o preço do produto? R$ "))
-    vendas.append(iten)
-    vendas.append(valor)
-    vendas.sort()
+    valor=float(input("Qual o preço do produto? R$ "))
+    vendas.append({"nome":iten, "preco":valor})
     print(f"\nProduto {iten} registrado com sucesso!\n")
             
 def total_arrecadado():
-    total = sum(int(vendas))
+    if not vendas:
+        print("\nNenhuma venda registrada!")
+    total = sum(v["preco"]for v in vendas)
     print(f"Valor total arrecadado: R$ {total:.2f}\n")
 
 def caro_barato():
     if not vendas :
         print("Nenhuma venda registrada!\n")
         return
-    caro =max(vendas)
-    barato=min(vendas)
-    print(f"Produto mais caro: {caro} \n")
-    print(f"Produto mais barato: {barato}\n")
+    caro =max(vendas, key=lambda x: x["preco"])
+    barato=min(vendas, key=lambda x: x["preco"])
+    print(f"Produto mais caro: {caro['nome']} (R$ {caro['preco']:.2f})\n")
+    print(f"Produto mais barato: {barato['nome']} (R$ {barato['preco']:.2f})\n")
 
 def consultar():
-    for i in range (len(vendas)):
-        if vendas [i] == encontrar:
-            return i
-        else:
-            return - 1
-    encontrar = input("Digite o nome do produto para consultar: ")
-    encontrado = consultar(vendas, encontrar)
+    if not vendas:
+        print("Nenhuma venda registrada!\n")
+        return
+    encontrar = input("Digite o nome do produto para consultar: ").strip()
+    encontrado = [v for v in vendas if v["nome"].lower() == encontrar.lower()]
     if encontrado:
         print(f"O produto {encontrar} foi vendido {len(encontrar)} vez(es).\n")
     else:

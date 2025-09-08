@@ -1,6 +1,6 @@
 # Verificação de CPF (Simplificado)
 
-cpf = input ("Digite o seu CPF, só os números: ")
+cpf = input ("\nDigite o seu CPF, só os números: ")
 
 tamanho_valido = len(cpf) == 11
 

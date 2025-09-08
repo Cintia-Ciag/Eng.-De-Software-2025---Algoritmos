@@ -1,6 +1,6 @@
 # Cálculo de complexidade simples
 
-n = int(input("Digite um número: "))
+n = int(input("\nDigite um número: "))
 
 soma = 0
 operacoes = 0

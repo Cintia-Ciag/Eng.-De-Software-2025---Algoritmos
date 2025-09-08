@@ -10,7 +10,7 @@ def num_primo(num):
             return False
     else:
         return True
-num =int(input("Digite um número: "))
+num =int(input("\nDigite um número: "))
 if num_primo(num):
     print(f"{num} é primo.")
 else:

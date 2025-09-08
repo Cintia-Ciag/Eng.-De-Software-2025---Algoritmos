@@ -13,5 +13,6 @@ agenda = {
     }
 print(agenda)
 
-agenda.update({"Ana", 99988-7766})
-print(agenda)
+agenda.update({"Ana": 99988-7766})
+for chave, valor in agenda.items():
+    print(chave, valor)

@@ -1,6 +1,6 @@
 #Desenvolva um programa que leia uma lista de números e mostre a média deles.
 
-entrada = input ("Digite os números separados por espaço: ")
+entrada = input ("\nDigite os números separados por espaço: ")
 
 num_str = entrada.split()
 

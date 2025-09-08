@@ -15,10 +15,10 @@ def par_impar():
         else:
             impares.append(num)
 
-        print("\n***RESULTADO***\n")
-        print(f"Números pares digitados: {pares}")
-        print(f"Números ímpares digitados: {impares}")
-        print(f"Quantidade de números pares: {len(pares)}")
-        print(f"Quantidade de números ímpares: {len(impares)}\n")
+    print("\n***RESULTADO***\n")
+    print(f"Números pares digitados: {pares}")
+    print(f"Números ímpares digitados: {impares}")
+    print(f"Quantidade de números pares: {len(pares)}")
+    print(f"Quantidade de números ímpares: {len(impares)}\n")
 
 par_impar()

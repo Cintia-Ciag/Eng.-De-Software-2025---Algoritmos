@@ -9,22 +9,27 @@
 
 print("\n***ANÁLISE DE VENDAS MENSAIS***\n")
 
+vendas=[]
+
 for i in range(31):
-    vendas=input(f"Digite a venda do dia {i+1}°: ")
-    ven=[int(v) for v in vendas.split()]
+    
+    valor=int(input(f"Digite a venda do dia {i+1}°: "))
+    vendas.append(valor)
+   
+print(vendas)
 
-total = sum(ven)
+total = sum(vendas)
 
-dmaisvendas = vendas.index(max(vendas))+1
-dmenosvendas = vendas.index(min(vendas))+1
+dmaisvendas = max(vendas)#vendas.index(max(vendas))+1
+dmenosvendas = min(vendas)#vendas.index(min(vendas))+1
 
 mediav = total/ len(vendas)
 
-dam = [v for v in ven if v > mediav]
+dam = [v for v in vendas if v > mediav]
 
 print("\n ---Resultado da Análise---\n")
 print(f"O total de vendas: {total}")
-print(f"O dia co mais vendas: {dmaisvendas}")
+print(f"O dia com mais vendas: {dmaisvendas}")
 print(f"O dia com menos vendas: {dmenosvendas}")
 print(f"A média de vendas: {mediav}")
 print(f"Os dias com vendas acima da média: {dam}\n")

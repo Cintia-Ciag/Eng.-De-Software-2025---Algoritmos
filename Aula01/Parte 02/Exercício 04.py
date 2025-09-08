@@ -4,8 +4,6 @@ def busca_linear (nomes, nome_procurado):
     for i in range (len(nomes)):
         if nomes [i] == nome_procurado:
             return i
-        else:
-            return - 1
        
 nomes = ["Ana", "Bruno", "Carlos", "Cintia", "Diego", "Fernanda"]
 
