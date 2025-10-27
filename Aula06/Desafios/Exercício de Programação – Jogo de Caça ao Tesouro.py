@@ -65,7 +65,6 @@ tentativa_atual = 1
 
 def tabu():
 
-    # for l in range(1, tentativa_atual +1):
         print('\n***TABULEIRO***')
         for l in tabuleiro:
             print(' '.join(l))
